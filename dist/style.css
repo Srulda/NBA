@@ -1,47 +1,54 @@
-body{
-    background-color: beige;
+body {
+    background-color: white;
     font-family: 'Oswald', sans-serif;
     font-size: 18px;
-}
-
-.players-container{
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
 
 }
 
-#names{
+.players-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+
+}
+
+#names {
     text-align: center;
-   
-  }
-#nav{
-font-size: 16px;
+
 }
 
- #userInput{
+#userInput {
     font-size: 16px;
     width: 78%;
-     border-radius: 1px;
-     font-family: 'Oswald', sans-serif;
+    /* border-radius: 1px; */
+    font-family: 'Oswald', sans-serif;
 }
-#button{
+
+#button {
     font-size: 17px;
     width: 21%;
     border-radius: 2px;
     font-family: 'Oswald', sans-serif;
 }
 
-#pos{
+#pos {
     text-align: center
-} 
-.player-info{
+}
+
+.player-info {
     background-color: rgb(235, 178, 74);
     margin: 5px;
     text-align: center;
 }
-#img{
+
+#img {
     border: 0.75px solid black;
     width: 300px;
     background-color: rgb(219, 201, 201);
     /* margin-left: 6.5%; */
+}
+
+#logos {
+    align-content: center;
+    margin: 1%;
 }

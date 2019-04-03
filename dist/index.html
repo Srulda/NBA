@@ -2,11 +2,12 @@
 <html>
 
 <head>
-    <title>My NBA Project</title>
+    <title>NBA- Pick Your Team</title>
+    <link rel="icon" href="https://a4.espncdn.com/combiner/i?img=%2Fi%2Fespn%2Fmisc_logos%2F500%2Fnba.png" type="image/icon type">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 </head>
-<img src="">
+
 
 <body>
     <div id="nav">
@@ -14,7 +15,7 @@
         <button onclick="renderPlayers()" id="button">Search</button>
     </div>
     <div class="players-container"></div>
-
+    <div id="logos"><img src="logo.jpg"> </div>
     <!------------------------------------------------>
     <script id="players-template" type="text/x-handlebars-template">
         {{#each players}}
@@ -22,8 +23,11 @@
         <div id="names"><p>{{lastName}} {{firstName}}</p>
                 <div id="jersey">{{jersey}}</div>
         </div>
+        <div id="pic">
         <img id="img" src="https://nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}" >
+        </div>
         <p id="pos">{{position}}</p>
+        
         </div>
         {{/each}}
        
