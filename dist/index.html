@@ -18,7 +18,7 @@
     <div id="logos"><img src="logo.jpg"> </div>
     <!------------------------------------------------>
     <script id="players-template" type="text/x-handlebars-template">
-        {{#each players}}
+        {{#each data}}
         <div class="player-info">
         <div id="names"><p>{{lastName}} {{firstName}}</p>
                 <div id="jersey">{{jersey}}</div>
@@ -35,6 +35,8 @@
 
     <script src="./handlebars/dist/handlebars.js"></script>
     <script src="./jquery/dist/jquery.js"></script>
+    <script src="apiManager.js"></script>
+    <script src="renderer.js"></script>
     <script src="main.js"></script>
 </body>
 

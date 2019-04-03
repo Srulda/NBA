@@ -1,17 +1,11 @@
+const renderer = new Renderer()
+const apiManager = new APIManager()
+
 const renderPlayers = function () {
-    let inp = $("#userInput").val()
-    $('#logos').empty()
-    $('.players-container').empty()
-    $.get(`http://localhost:2345/teams/${inp}`, (players) => {
-    render(players)
-     })
+        let input = $("#userInput").val()
+        $('#logos').empty()
+        $('.players-container').empty()
+        apiManager.loadData(input).then(function (data) {
+                renderer.render(data)
+        })
 }
-
-const render = function(players){
-        let source = $('#players-template').html();
-        let template = Handlebars.compile(source);
-        let newHTML = template({players});
-        $('.players-container').append(newHTML);
-
-}
-
