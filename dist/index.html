@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My NBA Project</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+</head>
+<img src="">
+
+<body>
+    <div id="nav">
+        <input type="text" id="userInput" placeholder="Pick Your Team ( e.g. pistons )">
+        <button onclick="renderPlayers()" id="button">Search</button>
+    </div>
+    <div class="players-container"></div>
+
+    <!------------------------------------------------>
+    <script id="players-template" type="text/x-handlebars-template">
+        {{#each players}}
+        <div class="player-info">
+        <div id="names"><p>{{lastName}} {{firstName}}</p>
+                <div id="jersey">{{jersey}}</div>
+        </div>
+        <img id="img" src="https://nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}" >
+        <p id="pos">{{position}}</p>
+        </div>
+        {{/each}}
+       
+     </script>
+
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
